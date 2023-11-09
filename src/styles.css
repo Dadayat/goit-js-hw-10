@@ -22,7 +22,7 @@ h1 {
     margin: 0;
 }
 
-.is-hidden {
+/* .is-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -33,7 +33,7 @@ h1 {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-}
+} */
 
 .breed-select {
     display: none;
@@ -44,24 +44,23 @@ h1 {
 .loader {
     width: 48px;
     height: 48px;
-    border-radius: 50%;
-    position: relative;
-    animation: rotate 1s linear infinite
-}
-
-.loader::before {
-    content: "";
-    box-sizing: border-box;
-    position: absolute;
-    inset: 0px;
-    border-radius: 50%;
     border: 5px solid #FFF;
-    animation: prixClipFix 2s linear infinite;
+    border-bottom-color: #FF3D00;
+    border-radius: 50%;
+    display: inline-block;
+    spa
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+    
 }
 
-@keyframes rotate {
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
     100% {
-        transform: rotate(360deg)
+        transform: rotate(360deg);
     }
 }
 
