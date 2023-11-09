@@ -15,14 +15,15 @@ body {
 img {
     display: block;
     max-width: 100%;
-    border: 1px solid #0d161b;
+    border: 5px solid #FF3D00;
+    border-radius: 15px;
 }
 
 h1 {
     margin: 0;
 }
 
-/* .is-hidden {
+.is-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -33,12 +34,18 @@ h1 {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-} */
+}
 
 .breed-select {
     display: none;
     max-width: 400px;
     margin: auto;
+}
+.loader-box {
+    margin: 50px;
+    display: flex;
+  justify-content: center;
+  
 }
 
 .loader {
@@ -48,7 +55,6 @@ h1 {
     border-bottom-color: #FF3D00;
     border-radius: 50%;
     display: inline-block;
-    spa
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
     
@@ -71,8 +77,9 @@ h1 {
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
-    background-color: #e5f3f2;
-    border: 1px solid #0d161b;
+    background-color: #FFF;
+    border: 5px solid #FF3D00;
+    border-radius: 15px;
 }
 
 .box-img {
