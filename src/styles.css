@@ -7,7 +7,7 @@ body {
         Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: linear-gradient(#FFF,#59a0e2);
+    background-color:#59a0e27e;
     color: #212121;
     line-height: 1.5;
     font-size: larger;
@@ -82,7 +82,7 @@ h1 {
     justify-content: center;
     flex-wrap: wrap;
     gap: 40px;
-    background-color: #FFF;
+
     border-radius: 15px;
 }
 

@@ -35,10 +35,13 @@ selector.addEventListener('change', onSelectBreed);
   updateSelect();
 
 function updateSelect(data) {
+  loader.classList.replace('loader', 'is-hidden');
+  selector.classList.remove('is-hidden');
+  divCatInfo.classList.add('is-hidden');
+  
   fetchBreeds(data)
     .then(data => {
-      loader.classList.replace('loader', 'is-hidden');
-
+    
       let markSelect = data.map(({ name, id }) => {
         return `<option value ='${id}'>${name}</option>`;
       });
