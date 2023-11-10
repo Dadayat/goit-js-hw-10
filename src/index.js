@@ -16,21 +16,40 @@ const { selector, divCatInfo, loader, error } = ref;
 error.classList.add('is-hidden');
 divCatInfo.classList.add('is-hidden');
 
-let arrBreedsId = [];
-fetchBreeds()
-    .then(data => {
-    loader.classList.replace('loader', 'is-hidden');
-    data.forEach(element => {
-      arrBreedsId.push({ text: element.name, value: element.id });
-    });
-    new SlimSelect({
-      select: selector,
-      data: arrBreedsId,
-    });
-  })
-  .catch(onFetchError);
-
 selector.addEventListener('change', onSelectBreed);
+
+// let arrBreedsId = [];
+// fetchBreeds()
+//     .then(data => {
+//     loader.classList.replace('loader', 'is-hidden');
+//     data.forEach(element => {
+//       arrBreedsId.push({ text: element.name, value: element.id });
+//     });
+//     new SlimSelect({
+//       select: selector,
+//       data: arrBreedsId,
+//     });
+//   })
+//   .catch(onFetchError);
+
+  updateSelect();
+
+function updateSelect(data) {
+  fetchBreeds(data)
+    .then(data => {
+      loader.classList.replace('loader', 'is-hidden');
+
+      let markSelect = data.map(({ name, id }) => {
+        return `<option value ='${id}'>${name}</option>`;
+      });
+      selector.insertAdjacentHTML('beforeend', markSelect);
+      new SlimSelect({
+        select: selector,
+      });
+    })
+    .catch(onFetchError);
+}
+
 
 function onSelectBreed(event) {
   loader.classList.replace('is-hidden', 'loader');
