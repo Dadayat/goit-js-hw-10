@@ -7,9 +7,10 @@ body {
         Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #fafafa;
+    background: linear-gradient(#FFF,#59a0e2);
     color: #212121;
     line-height: 1.5;
+    font-size: larger;
 }
 
 img {
@@ -24,7 +25,7 @@ h1 {
     color: #59a0e2;
 }
 
-.is-hidden {
+/* .is-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -35,6 +36,9 @@ h1 {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+} */
+.is-hidden {
+    display: none;
 }
 
 .breed-select {
@@ -79,7 +83,6 @@ h1 {
     flex-wrap: wrap;
     gap: 40px;
     background-color: #FFF;
-    border: 5px solid #59a0e2;
     border-radius: 15px;
 }
 
