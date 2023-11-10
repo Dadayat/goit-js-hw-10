@@ -74,7 +74,7 @@ function onFetchError(error) {
     }
     
   );
-  if (divCatInfo.classList.contains('is-visible')) {
-    divCatInfo.classList.replace('is-visible', 'is-hidden');
+  if (divCatInfo.classList.contains(!'is-hidden')) {
+    divCatInfo.classList.add('is-hidden');
 }
 }
