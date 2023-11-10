@@ -64,6 +64,7 @@ function onFetchError(error) {
   divCatInfo.classList.add('is-hidden');
 
   Notify.failure(
+    
     'Oops! Something went wrong! Try reloading the page or select another cat breed!',
     {
       position: 'center-center',
@@ -71,5 +72,9 @@ function onFetchError(error) {
       width: '400px',
       fontSize: '24px',
     }
+    
   );
+  if (divCatInfo.classList.contains('is-visible')) {
+    divCatInfo.classList.replace('is-visible', 'is-hidden');
+}
 }
