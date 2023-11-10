@@ -61,7 +61,7 @@ function onSelectBreed(event) {
 function onFetchError(error) {
   selector.classList.remove('is-hidden');
   loader.classList.replace('loader', 'is-hidden');
-  divCatInfo.classList.add('is-hidden');
+
 
   Notify.failure(
     
